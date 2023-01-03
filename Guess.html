@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guess the number</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .answer{
+            height: 25px;
+            width: 300px;
+            margin: auto;
+            text-align: center; 
+        }
+        .btn{
+            height: 10px;
+            width: 90px;
+            margin: auto;
+            text-align: center; 
+        }
+        body{
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess a number between 0 and 10</h1>
+    <div class="answer">
+        Answer:<input type="text" name="ans" id="ans">
+    </div>
+    <div class="btn">
+        <button onclick="anschk()">Send</button> 
+        <br>
+        <p id="out"></p>
+    </div>
+
+
+
+
+
+
+    <script>
+        function anschk(){
+            num  = Math.floor(Math.random()*11);
+            num = num.toString();
+            answer = document.getElementById('ans').value;
+            if (answer == num){
+                document.getElementById('out').innerHTML = 'Correct!';
+                num  = Math.floor(Math.random()*11);
+                num = num.toString();
+            }
+            else{
+                document.getElementById('out').innerHTML = 'Wrong! The number was ' + num;
+                num  = Math.floor(Math.random()*11);
+                num = num.toString();
+            }
+        }
+    </script>
+</body>
+</html>
