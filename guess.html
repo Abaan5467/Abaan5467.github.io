@@ -33,12 +33,6 @@
         <br>
         <p id="out"></p>
     </div>
-
-
-
-
-
-
     <script>
         function anschk(){
             num  = Math.floor(Math.random()*11);
@@ -50,7 +44,7 @@
                 num = num.toString();
             }
             else{
-                document.getElementById('out').innerHTML = 'Wrong! The number was ' + num;
+                document.getElementById('out').innerHTML = 'Wrong! The number was ' + num+'. Try again';
                 num  = Math.floor(Math.random()*11);
                 num = num.toString();
             }
