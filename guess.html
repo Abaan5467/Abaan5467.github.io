@@ -40,12 +40,12 @@
             answer = document.getElementById('ans').value;
             if (answer == num){
                 document.getElementById('out').innerHTML = 'Correct!';
-                num  = Math.floor(Math.random()*11);
+                num  = Math.floor((Math.random()*11)+1);
                 num = num.toString();
             }
             else{
                 document.getElementById('out').innerHTML = 'Wrong! The number was ' + num+'. Try again';
-                num  = Math.floor(Math.random()*11);
+                num  = Math.floor((Math.random()*11)+1);
                 num = num.toString();
             }
         }
