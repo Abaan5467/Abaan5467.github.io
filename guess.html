@@ -40,11 +40,13 @@
             answer = document.getElementById('ans').value;
             if (answer == num){
                 document.getElementById('out').innerHTML = 'Correct!';
+                document.getElementById('out').style.color = 'green';
                 num  = Math.floor((Math.random() * 10) + 1);
                 num = num.toString();
             }
             else{
                 document.getElementById('out').innerHTML = 'Wrong! The number was ' + num+'. Try again';
+                document.getElementById('out').style.color = 'red';
                 num  = Math.floor((Math.random() * 10) + 1);
                 num = num.toString();
             }
